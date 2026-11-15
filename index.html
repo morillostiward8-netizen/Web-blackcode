@@ -3,54 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New pagina de Stiward</title>
+    <title>Primera Pagina Web</title>
+    <!-- Enlace a nuestra hoja de estilos externa -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Encabezado / Presentación -->
-    <header class="hero">
-        <h1>¡Hola! Soy <span class="highlight">Stiward Morillo</span></h1>
-        <p>Desarrollador/a Web en proceso | Apasionado/a por la tecnología</p>
+    <!-- Barra de navegación (Flexbox horizontal) -->
+    <header class="navbar">
+        <div class="container navbar-content">
+            <a href="#" class="logo">Mi Pagina Web Creada Por <span>Stiward Morillo</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#contacto" class="btn-nav">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <!-- Sección Sobre Mí -->
-    <section class="section">
-        <h2>Algo Sobre Mí</h2>
-        <p>Soy un militar de Republica Dominicana estoy estudiando una Licenciatura en Computacion y esta es mi primera vez programando me disculpo si no lo hago tan bien como debe de estar pero lo estoy intentando me gusta mucho la programacion y espero aprender muchas cosas nuevas las cuales no se y llegar a lograr mis objetivos y a ti qué tipo de proyectos te gustaría construir.</p>
-    </section>
-
-    <!-- Sección de Habilidades -->
-    <section class="section">
-        <h2>Mis Habilidades</h2>
-        <ul class="skills-list">
-            <li>HTML5</li>
-            <li>CSS3</li>
-            <li>JavaScript</li>
-            <li>Git & GitHub</li>
-        </ul>
-    </section>
-
-    <!-- Sección de Proyectos -->
-    <section class="section">
-        <h2>Proyectos</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3>Mi Tarjeta Digital</h3>
-                <p>Mi primera página web creada con HTML y CSS.</p>
+    <!-- Sección Hero (Flexbox centrado vertical y horizontal) -->
+    <section id="inicio" class="hero">
+        <div class="container hero-content">
+            <h1>Diseño Web Moderno con <span class="highlight">HTML Y CSS.</span></h1>
+            <p>Muy Buenas a todos esta es mi primera pagina web, soy un militar de Republica Dominicana y estoy estudiando una Licenciatura en Computacion en UTEL Universidad para mi es una muy buena esperiencia y un buen aprendizaje.</p>
+            <div class="hero-buttons">
+                <a href="#servicios" class="btn btn-primary">Explorar Servicios</a>
+                <a href="#proyecto" class="btn btn-secondary">Ver Estructura</a>
             </div>
-            <!-- Puedes añadir más tarjetas de proyectos aquí en el futuro -->
         </div>
     </section>
 
-    <!-- Pie de página / Contacto -->
-    <footer>
-        <h2>Contacto</h2>
-        <p>¿Quieres hablar conmigo?</p>
-        <div class="social-links">
-            <a href="https://Morillostiward8@gmail.com">Correo</a>
-            <a href="https://github.com/morillostiward8-netizen" target="_blank">GitHub</a>
-            <a href="tel:+18494356029">Teléfono</a>
+    <!-- Sección de Servicios / Tarjetas (Flexbox con flex-wrap) -->
+    <section id="servicios" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Cosas que Hemos Aprendido.</h2>
+                <p>Estamos aprendiendo a programar páginas web como esta con archivos HTML y CSS.</p>
+            </div>
+            
+            <div class="cards-container">
+                <article class="card">
+                    <div class="card-icon">📐</div>
+                    <h3>Diseño Responsivo</h3>
+                    <p>Uso de <code>flex-wrap: wrap</code> y <code>flex: 1 1 300px</code> para adaptarse a cualquier pantalla sin media queries complejas.</p>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon">⚡</div>
+                    <h3>Alineación Precisa</h3>
+                    <p>Control total sobre los ejes principal y transversal usando <code>justify-content</code> y <code>align-items</code>.</p>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon">🎨</div>
+                    <h3>Código Modular</h3>
+                    <p>Separación clara entre la estructura HTML y los estilos CSS para un flujo de trabajo profesional en VS Code.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Sobre el Proyecto (Flexbox en dos columnas) -->
+    <section id="proyecto" class="about">
+        <div class="container about-wrapper">
+            <div class="about-text">
+                <h2>¿Por qué usar Flexbox?</h2>
+                <p>Flexbox facilita la distribución del espacio entre los elementos de una interfaz y ofrece potentes capacidades de alineación en una sola dimensión (fila o columna).</p>
+                <ul class="feature-list">
+                    <li>✓ Centrado vertical y horizontal sin complicaciones.</li>
+                    <li>✓ Espaciado uniforme mediante la propiedad <code>gap</code>.</li>
+                    <li>✓ Reordenamiento visual independiente del orden en el HTML.</li>
+                </ul>
+            </div>
+            <div class="about-visual">
+                <div class="flex-demo-box">
+                    <div class="demo-header">display: flex;</div>
+                    <div class="demo-items">
+                        <div class="demo-item">row</div>
+                        <div class="demo-item">row-reverse</div>
+                        <div class="demo-item">column</div>
+                        <div class="demo-item">column-reverse</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página (Flexbox space-between) -->
+    <footer id="contacto" class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 MiPaginaWeb. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="https://Morillostiward8@gmail.com">Correo</a>
+                <a href="https://github.com/morillostiward8-netizen" target="_blank">GitHub</a>
+                <a href="tel:+18494356029">Teléfono</a>
+            </div>
         </div>
     </footer>
 
